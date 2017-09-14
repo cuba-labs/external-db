@@ -1,0 +1,30 @@
+<Context>
+
+    <!-- Database connection -->
+    <Resource
+      name="jdbc/CubaDS"
+      type="javax.sql.DataSource"
+      maxTotal="20"
+      maxIdle="2"
+      maxWaitMillis="5000"
+      driverClassName="org.hsqldb.jdbc.JDBCDriver"
+      url="jdbc:hsqldb:hsql://localhost/exdb"
+      username="sa"
+      password=""/>
+
+    <!-- External database connection -->
+    <Resource
+      name="jdbc/MyDS"
+      type="javax.sql.DataSource"
+      maxTotal="20"
+      maxIdle="2"
+      maxWaitMillis="5000"
+      driverClassName="org.h2.Driver"
+      url="jdbc:h2:mem:test"
+      username="sa"
+      password=""/>
+
+    <!-- Switch off session serialization -->
+    <Manager pathname=""/>
+
+</Context>
